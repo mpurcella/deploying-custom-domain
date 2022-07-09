@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Deploying App to Custom Domain - Porkbun</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1 class="title">Deploying App to Custom Domain - Porkbun</h1>
+		<ul>
+			<li class="list-item">
+				In Porkbun, click "Domain Management," and then click on the "website" icon of the domain you want to
+				set up.
+			</li>
+			<li class="list-item">
+				Connect to Github. When connecting Github, you can choose an individual repository or select all
+				repositories. Once connected and returned to Porkbun, choose the Branch that you want to connect. If
+				React - it's gh-pages
+			</li>
+			<li class="list-item">
+				Navigate back to "Domain Management." Click on "Details" next to the domain that you are setting up to
+				show a dropdown menu, and click on "Edit" next to "DNS RECORDS."
+			</li>
+			<li class="list-item">
+				In the "DNS Records Menu" add a "CNAME" type using the "Quick DNS Config." Select "Github."
+			</li>
+			<li class="list-item">
+				The "Host" will remain "www,"" and the "Answer" should be your Github username. For instance:
+				example.github.io
+			</li>
+			<li class="list-item">
+				In the same "DNS Records Menu," add a TXT type. Follow this Github tutorial:
+				<a
+					href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages"
+					>https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages</a
+				>
+			</li>
+			<li class="list-item">
+				After the "CNAME" and "TXT" types have been added to the "DNS Records," Navigate to your Github
+				repository, click "settings," and then click "pages."
+			</li>
+			<li class="list-item">
+				Add the domain name to the "Custom Domain" text field and save. If set up correctly it will show "DNS
+				check successful" after saving the domain.
+			</li>
+			<li class="list-item">
+				In your text editor, open the package.json file and change the "homepage" from the github repository to
+				the name of your domain. Push that change to Github.
+			</li>
+			<br />
+			<p>
+				*** At some point when setting up the domain in Github a "CNAME" file will be created. Make sure to use
+				"git pull" to merge the remote repository with your local repository ***
+			</p>
+		</ul>
+	</body>
+</html>
