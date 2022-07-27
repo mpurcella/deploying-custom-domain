@@ -43,21 +43,22 @@
 			</li>
 			<li class="list-item">
 				Add the domain name to the "Custom Domain" text field and save. If set up correctly it will show "DNS
-				check successful" after saving the domain.
+				check successful" after saving the domain. A CNAME should be created and added to the root of the GitHub
+				repository. Use "git pull" to merge the remote repository with the local repository.
+				<br />
+				<br />
+				*** If no CNAME file is automatically created, create one in your text editor in the main root and push
+				to GitHub. The file name should be "CNAME" and the content should only be the url of the website. Ex:
+				example.com ***
 			</li>
 			<li class="list-item">
 				In your text editor, open the package.json file and change the "homepage" from the github repository to
 				the name of your domain. Push that change to Github.
+				<br />
+				<br />
+				*** Make sure the "homepage" URL retains the "http://". ***
 			</li>
 			<br />
-			<p>
-				*** At some point when setting up the domain in Github a "CNAME" file will be created. Make sure to use
-				"git pull" to merge the remote repository with your local repository.
-				<br />
-				<br />
-				If not CNAME file is automatically created, create one in your text editor in the main root and push to
-				GitHub. ***
-			</p>
 		</ul>
 	</body>
 </html>
